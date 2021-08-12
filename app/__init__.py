@@ -2,8 +2,11 @@
 # @Time: 2021/8/13 上午 06:02
 # @Software: PyCharm
 
-from flask import Flask, request, abort
+from flask import Flask
 from linebot import LineBotApi, WebhookHandler
+
+app = Flask(__name__)
+
 import configparser
 config = configparser.ConfigParser()
 config.read('config.ini')

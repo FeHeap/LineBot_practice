@@ -3,7 +3,7 @@
 # @Software: PyCharm
 
 from app import app, handler
-
+from flask import request, abort
 from linebot.exceptions import InvalidSignatureError
 
 @app.route('/callback', methods=['POST'])
