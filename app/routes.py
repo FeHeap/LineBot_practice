@@ -3,8 +3,12 @@
 # @Software: PyCharm
 
 from app import app, handler
-from flask import request, abort
+from flask import request, abort, render_template
 from linebot.exceptions import InvalidSignatureError
+
+@app.route('/')
+def home():
+    return render_template("home.html")
 
 @app.route('/callback', methods=['POST'])
 def callback():
