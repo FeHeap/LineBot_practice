@@ -5,7 +5,7 @@
 from app import line_bot_api, handler
 
 from linebot.models import MessageEvent, TextMessage, TextSendMessage
-import forms_camp
+from app import forms_camp
 
 @handler.add(MessageEvent, message=TextMessage)
 def Reply(event):
