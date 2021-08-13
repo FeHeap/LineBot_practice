@@ -15,7 +15,7 @@ def Reply(event):
         if command[0:2] == '表單':
             command = str.strip(command[2:])
             if command in forms_camp.date_to_link:
-                message_to_client = '今日的簽到表單\n' + forms_camp.date_to_link[command]
+                message_to_client = f'今日({command})的簽到表單\n' + forms_camp.date_to_link[command]
                 line_bot_api.reply_message(
                     event.reply_token,
                     TextSendMessage(text=message_to_client)
