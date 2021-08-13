@@ -7,7 +7,8 @@ from app import line_bot_api, handler
 from linebot.models import MessageEvent, TextMessage, TextSendMessage
 
 @handler.add(MessageEvent, message=TextMessage)
-def echo(event):
+def Reply(event):
+    print("user_id",event.source.user_id)
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=event.message.text)
