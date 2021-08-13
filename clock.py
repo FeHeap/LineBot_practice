@@ -8,7 +8,7 @@ import datetime
 
 sched = BlockingScheduler()
 
-@sched.scheduled_job('cron', day_of_week='mon-fri', minute='*/30')
+@sched.scheduled_job('cron', day_of_week='mon-fri', minute='*/2')
 def scheduled_job():
     print('========== APScheduler CRON ==========')
     print('This job runs every mon-fri */30 min.')
